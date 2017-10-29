@@ -1,0 +1,76 @@
+<doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mobi.css/1.1.0/mobi.min.css" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+  </head>
+  <body>
+    <div class="flex-center">
+      <div class="container">
+
+        <h1 class="text-center">{{ site.title }}</h1>
+        <p class="text-center text-muted">{{ site.description }}</p>
+
+        <p class="text-center">
+          {% for item in site.social %}
+            <a class="site-social-link" href="{{ item.url }}" title="{{ item.title }}">
+              <img class="site-social-img" src="{{ item.img }}" alt="{{ item.title }}" width="24" height="24" />
+            </a>
+          {% endfor %}
+        </p>
+
+        <div class="flex-left top-gap-big">
+          <div class="unit-0">
+            <img class="site-avatar" alt="avatar" src="{{ site.avatar }}" width="64" height="64" />
+          </div>
+          <p class="unit-0 site-bubble">{{ site.introduction }}</p>
+        </div>
+
+        {% if site.websites %}
+          <h2>{{ site.websites.title }}</h2>
+          <ul>
+            {% for item in site.websites.names%}
+              <li class="site-project">
+                <a href="{{ item }}">{{ item }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+          {{ site.websites.content }}
+        {% endif %}
+
+
+        {% if site.timeline %}
+          <h2>{{ site.timeline.title }}</h2>
+          {% for item in site.timeline.timeline %}
+            {% if item.date %}
+              <p class="site-date"><small><time>{{ item.date }}</time></small></p>
+            {% else %}
+              <p class="site-experience">{{ item }}</p>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+
+
+        {% if site.members %}
+        <h2>Members</h2>
+        <ul>
+            {% for member in site.members %}
+              <li>{{member.name}}</li>
+            {% endfor%}
+        </ul>
+        {% endif%}
+
+        <hr class="top-gap-big"/>
+      </div>
+    </div>
+
+  </body>
+</html>

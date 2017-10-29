@@ -1,0 +1,43 @@
+title: Fast 420
+description: 420 enthusiasm chatroom
+
+social:
+  - title: GitHub
+    img: /assets/images/github.ico
+    url: https://github.com/fast420
+
+avatar: /assets/images/avatar.jpg
+introduction: >
+    当php不再发出信号，当DFFT拔掉了电源，荣耀还会460吗?
+
+websites:
+  title: 一些我们的网站
+  names:
+    - http://xiancollege.com
+    - https://mierhuo.com
+    - https://luckyscript.com
+    - https://github.com/DeeJay0921
+  content: >
+    <p>and we will have more!</p>
+
+timeline:
+  title: Timeline
+  timeline:
+    - date: Now
+    - "我们毕业了"
+    - date: 2015-12
+    - "萧逸脱单"
+    - date: 2013-06
+    - "我们相遇，一起军训"
+    - date: 2013-08
+
+
+members:
+  - name: "萧峰"
+  - name: "萧祖"
+  - name: "萧迹"
+  - name: "萧剑"
+  - name: "萧瑟"
+  - name: "萧逸"
+  - name: "萧夜雨"
+  - name: "萧赜"
